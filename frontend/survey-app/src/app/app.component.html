@@ -1,0 +1,73 @@
+<!-- Root component template with navigation bar, content area, and footer -->
+<!-- Done by Shreyas Patil -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark sticky-top"
+  style="background-color: #006633"
+>
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <i class="fas fa-university me-2"></i>GMU CS Department
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/survey"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Survey</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/surveys" routerLinkActive="active"
+            >All Surveys</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Contact Information</h5>
+        <p>
+          <i class="fas fa-map-marker-alt me-2"></i>Department of Computer
+          Science<br />
+          Nguyen Engineering Building<br />
+          4400 University Drive<br />
+          Fairfax, VA 22030
+        </p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <p>
+          <i class="fas fa-phone me-2"></i>Phone: 703-993-1530<br />
+          <i class="fas fa-envelope me-2"></i>Email: csinfo&#64;gmu.edu
+        </p>
+        <p class="small">SWE 642 Group Project</p>
+      </div>
+    </div>
+  </div>
+</footer>
